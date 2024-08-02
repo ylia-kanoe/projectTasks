@@ -115,3 +115,18 @@ button:hover{
 .task input {
     width: 80%;
 }
+
+.block-table td {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #000;
+}
+
+.block-table table {
+    margin-top: 20px;
+    border: 1px solid #000;
+}
+
+.block-table {
+    margin-bottom: 10px;
+}

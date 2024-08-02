@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уровень 5.6</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="../../index.html">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="block-tasks">
+        <div class="container">
+            <div class="working-tasks">
+                <div class="task">
+                    <p class="text-task">№1 Дан инпут, кнопка и абзац. В инпут вводится год. По нажатию на кнопку определите, введен високосный год или нет и выведите информацию об этом в абзац.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <input class='task-one-input' placeholder="Введите дату в формате 'гггг-мм-дд'" value="2025-12-31">
+                    <p class="task-one-result"></p>
+                    <button id="dateFound">Год високосный?</button>
+                </div>
+                <div class="task">
+                    <p class="text-task">№2 Дан инпут и кнопка. По нажатию на кнопку выведите в инпут случайное число из диапазона от 1 до 100.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <input class="task-two-input">
+                    <button id="clickRandom">Вывести случайное число</button>
+                </div>
+                <div class="task">
+                    <p class="text-task">№3 Дан инпут, кнопка и абзац. В инпут вводится дата в формате 2025-12-31. По нажатию на кнопку выведите в абзац день недели, соответствующий этой дате.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <input class="task-three-input" value="2025-12-31">
+                    <p class="task-three-result"></p>
+                    <button id="dataDayFound">Вывести день недели</button>
+                </div>
+                <div class="task">
+                    <p class="text-task">№4 Дан див с шириной, высотой и границей, и кнопка. По клику на кнопку увеличьте размеры дива в два раза.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <div class="task-four-block" style="width: 200px; height:100px; border: 1px solid #000"></div>
+                    <br>
+                    <button id="transformBlock">Увеличить в 2 раза</button>
+                </div>
+                <div class="task">
+                    <style>
+                        .reference-block {
+                            position: absolute;
+                            top: -16px;
+                            left: 1px;
+                            color: #000;
+                            width: max-content;
+                        }
+                        .task-five-reference{
+                            position: relative;
+                        }
+                    </style>
+                    <p class="text-task">№5 Даны ссылки. Сделайте так, чтобы по наведению на любую ссылку над ней появлялось значение ее атрибута href.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <a class="task-five-reference" href="https://vk.com/ylia_kano_o" >Ссылка 1</a>
+                    <a class="task-five-reference" href="https://vk.com/id209404763">Ссылка 2</a>
+                    <a class="task-five-reference" href="https://www.youtube.com/@ylia-kano">Ссылка 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/page5/page5-6.js"></script>
+    <script src="../../js/script2.js"></script>
+</body>
+</html>

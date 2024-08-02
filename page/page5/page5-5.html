@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уровень 5.5</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="../../index.html">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="block-tasks">
+        <div class="container">
+            <div class="working-tasks">
+                <div class="task">
+                    <p class="text-task">№1 Дан инпут, кнопка и три абзаца. В инпут вводится дата в формате 2025-12-31. По нажатию на кнопку выведите в первый абзац год, во второй абзац - месяц, в третий день.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <input class='task-one-input-one' placeholder="Введите число" value="2025-12-31">
+                    <p id="yearFound"></p>
+                    <p id="monthFound"></p>
+                    <p id="dateFound"></p>
+                    <button id="clickDateCut">Вывести дату в абзацы</button>
+                </div>
+                <div class="task">
+                    <p class="text-task">№2 Даны два инпута и кнопка. В инпуты вводятся числа. По нажатию на кнопку заполните массив целыми числами от первого введеного числа до последнего.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    Число 1: <input class="task-two-input-one"><br>
+                    Число 2: <input class="task-two-input-two">
+                    <p class="task-two-result"></p>
+                    <button id="massFull">Заполнить массив</button>
+                </div>
+                <div class="task">
+                    <p class="text-task">№3 Дан инпут, абзац и кнопка. В инпут вводится строка. По нажатию на кнопку выведите в абзац последний символ введенной строки.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <input class="task-three-input">
+                    <p class='task-three-result'></p>
+                    <button id="foundSymbol">Последний символ введенной строки</button>
+                </div>
+                <div class="task">
+                    <p class="text-task">№4 Дан абзац, в котором записано число 1. По нажатию на кнопку увеличивайте число в абзаце на единицу.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <p class='task-four-paragraf'>1</p>
+                    <button id="addNumber">Увеличить на 1</button>
+                </div>
+                <div class="task">
+                    <p class="text-task">№5 Дан инпут и абзац. В инпут вводится строка со словами. По потери фокуса выведите в абзац количество слов во введенной строке.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <input class="task-five-input">
+                    <p class="task-five-result"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/page5/page5-5.js"></script>
+    <script src="../../js/script2.js"></script>
+</body>
+</html>
