@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уровень 7.6</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="../../index.html">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="block-tasks">
+        <div class="container">
+            <div class="working-tasks">
+                <div class="task">
+                    <p class="text-task">№1 На странице через абсолютное позиционирование расположены два дива. По клику на кнопку проверьте, накладываются ли эти дивы друга на друга или нет.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <div class="task-one-block">
+                        <div style ='background-color: red; width: 100px; height: 50px; position: absolute; right: 50px;'></div>
+                        <div style ='background-color: blue; width: 100px; height: 50px; position: absolute; right: 50px;'> </div>
+                    </div>
+                    <button id="checkPosition">Проверка наложения</button>
+                    <p class="task-one-result"></p>
+                </div>
+                <div class="task">
+                    <p class="text-task">№2 Дана кнопка и ul. По клику на кнопку выведите список всех возможных счастливых билетов. Билет представляет собой строку из шести цифр, может быть с нулями спереди. Билет считается счастливым, если сумма сумма первых трех цифр равна сумме вторых трех цифр.</p>
+                    <div class="icon">🛈
+                        <pre class="icon-pre"></pre>
+                    </div>
+                    <ul class="task-two-list-items more-info"></ul>
+                    <button id="generatorHappyTick">Сгенерировать счастливые билеты</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/page7/page7-6.js"></script>
+    <script src="../../js/script2.js"></script>
+</body>
+</html>

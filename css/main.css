@@ -125,8 +125,34 @@ button:hover{
 .block-table table {
     margin-top: 20px;
     border: 1px solid #000;
+    border-spacing: 0;
 }
 
 .block-table {
     margin-bottom: 10px;
+}
+
+.hide{
+    visibility: hidden;
+}
+
+.task-three-pafagraf span, .task-two-pafagraf span{
+    border: 1px solid;
+}
+
+.new-reference {
+    display: block;
+}
+
+.varning{
+    background-color: red;
+}
+
+.task-two-list-items.more-info {
+    column-count: 4;
+}
+
+.task-three-products {
+    display: flex;
+    justify-content: space-around;
 }
