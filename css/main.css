@@ -156,3 +156,30 @@ button:hover{
     display: flex;
     justify-content: space-around;
 }
+.zindex{
+    z-index: 100;
+}
+
+.task-one-list-items .sub-menu{
+	display: none;
+}
+.open, .task-one-list-items .open, .task .popup.open{
+	display: block;
+}
+
+.task .popup {
+    border: 1px solid;
+    width: 500px;
+    padding: 20px;
+    display: none;
+    margin: 25px auto;
+}
+
+.task .close-popup {
+    float: right;
+    cursor: pointer;
+}
+
+.task .popup p{
+    margin-top: 30px;
+}
