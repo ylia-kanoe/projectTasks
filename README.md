@@ -1,1 +1,1 @@
-# projectTasks
+# Выполнение задач с сайта https://code.mu/ru/javascript/tasker/stager/
