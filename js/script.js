@@ -262,6 +262,42 @@ function createBlockNumThree(taskTitle, paramOne, paramTwo, paramThree, buttonNa
     })
 }
 
+/* ТРИ СТРОКИ И ЧИСЛО */ 
+
+function createBlockNumFour(taskTitle, paramNum, paramOne, paramTwo, paramThree, buttonName, buttonFuction){
+    let task = createTaskBlock(taskTitle)
+    let result = document.createElement('p')
+    let inputValueNum = document.createElement('input')
+    let inputValueOne = document.createElement('input')
+    let inputValueTwo = document.createElement('input')
+    let inputValueThree = document.createElement('input')
+    let buttonFunc = document.createElement('button')
+
+    result.classList.add('result')
+
+    inputValueNum.value = paramNum
+    inputValueOne.value = paramOne
+    inputValueTwo.value = paramTwo
+    inputValueThree.value = paramThree
+    inputValueNum.placeholder = "Введите число"
+    inputValueOne.placeholder = "Введите слово"
+    inputValueTwo.placeholder = "Введите слово"
+    inputValueThree.placeholder = "Введите слово"
+    buttonFunc.textContent = buttonName
+
+    task.append(inputValueNum)
+    task.append(inputValueOne)
+    task.append(inputValueTwo)
+    task.append(inputValueThree)
+    task.append(result)
+    task.append(buttonFunc)
+    
+    buttonFunc.addEventListener('click', () => {
+        result.textContent = buttonFuction(inputValueNum.value, inputValueOne.value, inputValueTwo.value, inputValueThree.value)
+    })
+}
+
+
 /* СТРУКТУРА */
 
 function createBlockStruct(taskTitle, param, buttonName, buttonFuction){
