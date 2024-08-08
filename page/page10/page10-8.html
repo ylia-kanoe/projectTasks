@@ -18,11 +18,12 @@
         <div class="container">
             <div class="working-tasks">
                 <div class="task">
-                    <p class="text-task">№1 Дан массив. Выведите в консоль все варианты перестановки элементов этого массива.</p>
+                    <p class="text-task">№1 Дан массив. Выведите все варианты перестановки элементов этого массива.</p>
                     <div class="icon">🛈
                         <pre class="icon-pre"></pre>
                     </div>
-                    <p class="varning">ЗАДАНИЕ НЕ ВЫПОЛНЕНО</p>
+                    <p class="task-one-paragraf"></p>
+                    <ul class="task-one-list-items"></ul>
                 </div>
                 <div class="task">
                     <p class="text-task">№2 Напишите код, который нарисует радугу на канвасе.</p>
@@ -37,7 +38,10 @@
                     <div class="icon">🛈
                         <pre class="icon-pre"></pre>
                     </div>
-                    <p class="varning">ЗАДАНИЕ НЕ ВЫПОЛНЕНО</p>
+                    <input class="task-three-input-one">
+                    <input class="task-three-input-two">
+                    <button id="foundFriendlyNum">Дружественные числа</button>
+                    <ul class="task-three-list-items"></ul>
                 </div>
                 <div class="task">
                     <p class="text-task">№4 Дана форма с инпутами, текстареа, чебоксами, радиокнопками и селектами. Юзер как-то изменяет элементы формы. Сделайте так, чтобы после перезагрузки окна браузера все элементы формы пришли в то состояние, в котором их оставил юзер.
@@ -45,7 +49,44 @@
                     <div class="icon">🛈
                         <pre class="icon-pre"></pre>
                     </div>
-                    <p class="varning">ЗАДАНИЕ НЕ ВЫПОЛНЕНО</p>
+                    <form class="task-four-form">
+                        <input name="user-name" placeholder="введите имя">
+                        <input name="user-surname" placeholder="введите фамилию">
+                        <br>
+                        <textarea name="text-info" placeholder="о себе"></textarea>
+                        <br>
+                        <select name="select-one">
+                            <option value="Америка">Америка</option>
+                            <option value="Германия">Германия</option>
+                            <option value="Англия">Англия</option>
+                            <option value="Франция">Франция</option>
+                            <option value="Китай">Китай</option>
+                            <option value="Япония">Япония</option>
+                            <option value="Корея">Корея</option>
+                        </select>
+                        <br>
+                        <div class="input-inline-lang">
+                            <label>Английский<input value="Английский" name="lang-choose" type="checkbox"></label>
+                            <label>Итальянский<input value="Итальянский" name="lang-choose" type="checkbox"></label>
+                            <label>Французский<input value="Французский" name="lang-choose" type="checkbox"></label>
+                            <label>Немецкий<input value="Немецкий" name="lang-choose" type="checkbox"></label>
+                            <label>Русский<input value="Русский" name="lang-choose" type="checkbox"></label>
+                        </div>
+                        <select name="select-two">
+                            <option value="Кошка">Кошка</option>
+                            <option value="Собака">Собака</option>
+                            <option value="Хомячок">Хомячок</option>
+                            <option value="Птичка">Птичка</option>
+                            <option value="Рыбка">Рыбка</option>                          
+                        </select>
+                        
+                        <br>
+                        <label>1<input value="1" name="radio-num" class="checkbox-inline" type="radio"></label>
+                        <label>2<input value="2" name="radio-num" class="checkbox-inline" type="radio"></label>
+                        <label>3<input value="3" name="radio-num" class="checkbox-inline" type="radio"></label>
+                        <label>4<input value="4" name="radio-num" class="checkbox-inline" type="radio"></label>
+                        <label>5<input value="5" name="radio-num" class="checkbox-inline" type="radio"></label>
+                    </form>
                 </div>
                 <div class="task">
                     <p class="text-task">№5 Дана квадратная HTML таблица произвольного размера. По нажатию на кнопку транспонируйте ее, то есть завалите ее на бок. Посмотрим на примере. Пусть у нас есть вот такая таблица: <img src="../../img/10/10-8-5-1.JPG"> После транспонирования она должна превратится в следующую: <img src="../../img/10/10-8-5-2.JPG"></p>

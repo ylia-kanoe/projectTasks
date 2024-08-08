@@ -48,6 +48,74 @@ closePopup.addEventListener('click', (e) => {
 
 /* №3 Дан массив из шести цифр. Проверьте, можно ли собрать из этих цифр счастливый билет.*/
 
+function random(mass){
+	let massRand = []
+	for(let i = 0; i < mass.length; i++){
+		let randNum = Math.floor(Math.random() * mass.length)
+		if(!massRand.includes(randNum)){
+			massRand.push(randNum)
+		} else {
+			i--
+		}
+	}
+	let massRez = []
+	for(let i = 0; i < massRand.length; i++){
+		massRez.push(mass[massRand[i]])
+		
+	}
+	return massRez
+}
+
+function factorial(n) {
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result
+}
+
+function luckyTicket(mass){
+	let count = 0
+	let num = mass.length	
+	let massRez = []
+	let ts = 0
+	while(count < factorial(num)){
+		let ticket = random(mass)
+		let sum = 0
+		let sum2 = 0
+		for(let i = 0; i < ticket.length / 2; i++){
+			sum += +ticket[i]
+		}
+		for(let i = ticket.length / 2; i < ticket.length; i++){
+			sum2 += +ticket[i]
+		}
+		console.log(sum)
+		
+		console.log(sum2)
+		if(sum === sum2){
+			for(let i = 0; i < massRez.length; i++){
+				if(massRez[i].toString() === ticket.toString()){
+					ts = 1
+				}
+			}
+			if(ts == 1){
+
+			} else {
+				massRez.push(ticket)
+			}
+			ts = 0
+		}
+		count++	
+	}
+	if(massRez.length == 0){
+		return 'Счастливого билета НЕТ'
+	} else {
+		return 'Счастливые билеты: ' + massRez.join('    ')
+	}
+}
+
+createBlockMass("№3 Дан массив из шести цифр. Проверьте, можно ли собрать из этих цифр счастливый билет.", '4,8,5,7,6,4', 'Проверка на счастливые билеты', luckyTicket)
+
 /* №4 Дана прямоугольная таблица. По нажатию на кнопку покрасьте ячейки одной диагонали в красный цвет, а второй диагонали - в зеленый.*/
 
 let taskFourTableTd = document.querySelectorAll('.task-four-table td')
