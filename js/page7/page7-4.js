@@ -18,18 +18,30 @@ for(let i = 1; i <= days; i++){
     }
 }
 
-/* №2 Дан абзац, содержащий текст со словами. Сделайте так, чтобы по клику на любое слово из этого абзаца, это слово выделялось красным цветом.
+/* №2 Дан абзац, содержащий текст со словами. Сделайте так, чтобы по клику на любое слово из этого абзаца, это слово выделялось красным цветом.*/
 
-let colorTextPar = document.getElementById('colorTextPar')
+let colorTextPar = document.querySelector('.task-two-result')
 let colorText = colorTextPar.textContent.split(' ')
-console.log(colorText)
 
-colorTextPar.addEventListener('click', () => {
-    colorText.forEach(elem => {
-        console.log(elem)
+function textContentToSpans(){
+    colorTextPar.innerHTML = ''
+    for(let i = 0; i < colorText.length; i++){
+        let span = document.createElement('span')
+        span.textContent = colorText[i]
+        colorTextPar.append(span)
+        colorTextPar.append(' ')
+    }
+}
+textContentToSpans()
+
+let colorTextParSpan = document.querySelectorAll('.task-two-result span')
+
+Array.from(colorTextParSpan).forEach(elem => {
+    elem.addEventListener('click', () => {
+        elem.style.backgroundColor = 'red'
     })
 })
-*/
+
 
 /* №3 Дан инпут и кнопка. В него вводится число из четного количества цифр. По клику на кнопку проверьте, что число представляет собой счастливый билет, то есть сумма половины цифр равна сумме второй половине цифр.*/
 
@@ -57,11 +69,14 @@ checkHappyTicket.addEventListener('click', () => {
 /* №4 Дан инпут. В него вводится текст. Сделайте так, чтобы в инпут нельзя было ввести больше десяти символов. При превышении количества, символы просто не должны вводиться.*/
 
 let inputCheck = document.querySelector('.task-four-input')
+let inputDisabled = inputCheck.value
 
 inputCheck.addEventListener('input', () => {
-    if(String(inputCheck.value).length > 10){
-        inputCheck.setAttribute('disabled' ,'disabled') 
-    }
+    if(String(inputCheck.value).length <= 10){
+        inputDisabled = inputCheck.value
+	} else {
+		inputCheck.value = inputDisabled
+	}
 })
 
 /* №5 Дан инпут, абзац и кнопка. В инпут вводится число. По нажатию на кнопку сделайте так, чтобы в абзаце начал тикать обратный отсчет от введенного в инпут числа до нуля.*/
@@ -119,7 +134,27 @@ for(let i = 1; i <= days; i++){
     } else if(dateItem.getDate() == dateToday.getDate()){
         item.style.backgroundColor = 'green'
     }
-}`,``,`checkHappyTicket.addEventListener('click', () => {
+}`,`let colorTextPar = document.querySelector('.task-two-result')
+let colorText = colorTextPar.textContent.split(' ')
+
+function textContentToSpans(){
+    colorTextPar.innerHTML = ''
+    for(let i = 0; i < colorText.length; i++){
+        let span = document.createElement('span')
+        span.textContent = colorText[i]
+        colorTextPar.append(span)
+        colorTextPar.append(' ')
+    }
+}
+textContentToSpans()
+
+let colorTextParSpan = document.querySelectorAll('.task-two-result span')
+
+Array.from(colorTextParSpan).forEach(elem => {
+    elem.addEventListener('click', () => {
+        elem.style.backgroundColor = 'red'
+    })
+})`,`checkHappyTicket.addEventListener('click', () => {
     let num1 =  0
     let num2 =  0
    
@@ -134,10 +169,15 @@ for(let i = 1; i <= days; i++){
     } else{
         taskThreeResult.textContent = 'Это НЕ счастливый билет'
     }
-})`,`inputCheck.addEventListener('input', () => {
-    if(String(inputCheck.value).length > 10){
-        inputCheck.setAttribute('disabled' ,'disabled') 
-    }
+})`,`let inputCheck = document.querySelector('.task-four-input')
+let inputDisabled = inputCheck.value
+
+inputCheck.addEventListener('input', () => {
+    if(String(inputCheck.value).length <= 10){
+        inputDisabled = inputCheck.value
+	} else {
+		inputCheck.value = inputDisabled
+	}
 })`,`countDown.addEventListener('click', () => {
     resultCountDown.textContent = numCountDown.value
     intervalCountDown = setInterval(() => {

@@ -59,7 +59,30 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('textSize').style.height = localStorage.getItem('height') + 'px'
 })
 
-/* №4 Дан инпут и кнопка. По клику на кнопку выведите список ul всех избыточных чисел из промежутка, заданном значениями инпутов.*/
+/* №4 Дан инпут и кнопка. По клику на кнопку выведите список ul всех избыточных чисел из промежутка, от 0 до заданного значения инпута.*/
+
+let taskFourListItems = document.querySelector('.task-four-list-items')
+let taskFourInput = document.querySelector('.task-four-input') 
+let printRedundant = document.getElementById('printRedundant')
+
+printRedundant.addEventListener('click', () => {
+    taskFourListItems.innerHTML = ''
+    let num = +taskFourInput.value
+    let sum = 0
+    for(let i = num; i > 0; i--){
+        for(let j = num - 1 ; j > 0; j--){
+            if((i / j) % 1 == 0){
+                sum += j
+            }     
+        }
+        if( (sum - i) > i ){
+            let listItem = document.createElement('li')
+            listItem.textContent = i
+            taskFourListItems.append(listItem)
+        }
+        sum = 0
+    }
+})
 
 /* №5 Дана квадратная HTML таблица произвольного размера. По нажатию на кнопку заполните половину таблицу следующим образом:*/
 

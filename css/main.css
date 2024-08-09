@@ -149,7 +149,7 @@ button:hover{
     background-color: red;
 }
 
-.task-two-list-items.more-info {
+.more-info {
     column-count: 4;
 }
 
@@ -541,4 +541,28 @@ form.task-four-form .input-inline-lang input[name=lang-choose] {
 .task .checkbox-inline {
     margin-left: 3px;
     margin-right: 20px;
+}
+
+/* НОК */
+.block-nok{
+    display: flex;
+}
+
+.block-num-nok {
+    display: flex;
+    text-align: right;
+    width: 150px;
+}
+.block-num-nok .block-left {
+    border-right: 1px solid;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+.block-num-nok .block-right {
+    padding-left: 10px;
+}
+.result-nok {
+    flex-shrink: -1;
+    flex: 1 1 100%;
+    margin-top: 10px;
 }

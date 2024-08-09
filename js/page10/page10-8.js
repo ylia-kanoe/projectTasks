@@ -2,20 +2,25 @@
 
 let taskOneListItems = document.querySelector('.task-one-list-items')
 let taskOneParagraf = document.querySelector('.task-one-paragraf')
-let massive = [1,2,3,4,5]
+let massive = [1,2,3,4]
 taskOneParagraf.textContent = massive.join(', ')
 
 function randomMass(mass){
-    let massRez = []
+    let massRandNum = []
     for(let i = 0; i < mass.length; i++){
         let randomNum = Math.floor(Math.random() * mass.length)
-        if(!massRez.includes(mass[randomNum])){
-            massRez.push(mass[randomNum])
+        if(!massRandNum.includes(randomNum)){
+            massRandNum.push(randomNum)
         } else {
             i--
         }
     }
-    return massRez
+    let massRez = []
+	for(let i = 0; i < massRandNum.length; i++){
+		massRez.push(mass[massRandNum[i]])
+		
+	}
+	return massRez
 }
 
 function newMass(mass){

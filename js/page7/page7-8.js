@@ -28,6 +28,32 @@ addReference.addEventListener('click', () => {
 /* №2 Дан абзац, содержащий текст со словами. Сделайте так, чтобы по клику на любое слово из этого абзаца, это слово меняло порядок своих букв на 
 обратный.*/
 
+let colorTextPar = document.querySelector('.task-two-result')
+let colorText = colorTextPar.textContent.split(' ')
+
+function textContentToSpans(){
+    colorTextPar.innerHTML = ''
+    for(let i = 0; i < colorText.length; i++){
+        let span = document.createElement('span')
+        span.textContent = colorText[i]
+        colorTextPar.append(span)
+        colorTextPar.append(' ')
+    }
+}
+textContentToSpans()
+
+let colorTextParSpan = document.querySelectorAll('.task-two-result span')
+
+Array.from(colorTextParSpan).forEach(elem => {
+    elem.addEventListener('click', () => {
+        let str = ''
+        for(let i = elem.textContent.length - 1; i >= 0; i--){
+            str += elem.textContent[i]
+        }
+        elem.textContent  =  str
+    })
+})
+
 /* №3 Дан следующий массив: let users = [{id: 1, name: 'user1', surn: 'surn1', age: 30},{id: 2, name: 'user2', surn: 'surn2', age: 31},{id: 3, name: 'user3', surn: 'surn3', age: 32},]; Выведите элементы этого массива в виде таблицы table так, чтобы каждое поле объекта попало в свой тег td. Сделайте заголовки колонок вашей таблицы.*/
 
 let users = [
@@ -94,7 +120,31 @@ let massFunc = [`addReference.addEventListener('click', () => {
         elem.append(refer)
     })
     refers = document.querySelectorAll('.task-one-list-items a')
-})`,``,`function newTable(users){
+})`,`let colorTextPar = document.querySelector('.task-two-result')
+let colorText = colorTextPar.textContent.split(' ')
+
+function textContentToSpans(){
+    colorTextPar.innerHTML = ''
+    for(let i = 0; i < colorText.length; i++){
+        let span = document.createElement('span')
+        span.textContent = colorText[i]
+        colorTextPar.append(span)
+        colorTextPar.append(' ')
+    }
+}
+textContentToSpans()
+
+let colorTextParSpan = document.querySelectorAll('.task-two-result span')
+
+Array.from(colorTextParSpan).forEach(elem => {
+    elem.addEventListener('click', () => {
+        let str = ''
+        for(let i = elem.textContent.length - 1; i >= 0; i--){
+            str += elem.textContent[i]
+        }
+        elem.textContent  =  str
+    })
+})`,`function newTable(users){
     let tableResult = document.querySelector('.task-three-table')
     let tableTR = document.createElement('tr')
     for(let item of Object.keys(users[0])){
