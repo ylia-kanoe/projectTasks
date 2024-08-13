@@ -229,6 +229,7 @@ let result = document.querySelector('.result-dividing-numbers')
 let divideColumn = document.getElementById('divideColumn')
 
 divideColumn.addEventListener('click', () => {
+	result.innerHTML = ''
     function dividingNumbers(numOne, numTwo) {
         let quotientRez = String(numOne / numTwo)
     
@@ -270,9 +271,11 @@ divideColumn.addEventListener('click', () => {
             rez.classList.add('minus')
             rez1.classList.add('rez')
     
-            rez.textContent += (rez.textContent += String(numOne).slice(i, String(+(quotientRez[i]) * 52).length)) - +(quotientRez[i]) * 52
-            rez1.textContent += +(quotientRez[i]) * 52
-    
+            rez.textContent += (rez.textContent += String(numOne).slice(i, String(+(quotientRez[i]) * +numTwo ).length)) - +(quotientRez[i]) * +numTwo  + String(numOne).slice(String(numOne).slice(i, String(+(quotientRez[i]) * +numTwo ).length).length)
+            rez1.textContent += +(quotientRez[i])  * +numTwo
+			if(+(quotientRez[i])  * +numTwo == 0){
+				break
+			}
             for (let k = 0; k <= i; k++) {
                 rez.style.transform = `translateX(${(k + 1) * 10}px)`
                 rez.style.marginRight = (k + 1) * 10 + 'px'

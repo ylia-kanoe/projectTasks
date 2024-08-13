@@ -2,19 +2,18 @@
 
 let reducingFraction = document.querySelector('.reducing-fraction')
 
-
 /* №2 Реализуйте алгоритм Решето Эратосфена для поиска простых чисел в заданном промежутке.*/
 
 function sieveEratosfen (num, num2){
     let mass = []
     for(let i = num; i <= num2; i++){
-        mass.push(i)
+        mass.push(+i)
     }
-    for(let i = 0; i <= mass.length; i++){
-        for(let j = 1; j <= mass.length; j++){
-            if(j % i == 0){
+
+    for(let i = 1; i <= mass.length; i++){
+        for(let j = i + 1 ; j <= mass.length; j++){
+            if(mass[j] % mass[i] == 0){
                 mass.splice(j, 1)
-                //i--
             }
         }
     }
@@ -55,7 +54,7 @@ function draw() {
     let hoursTime = date.getHours()
     let minutesTime = date.getMinutes()
     
-    console.log(minutesTime)
+    //console.log(minutesTime)
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
     ctx.beginPath();
@@ -106,3 +105,20 @@ tableFill.addEventListener('click', () => {
 })
 
 // 14 15 20 21
+
+
+let massFunc = [``, ``, ``, `function sieveEratosfen (num, num2){
+    let mass = []
+    for(let i = num; i <= num2; i++){
+        mass.push(+i)
+    }
+
+    for(let i = 1; i <= mass.length; i++){
+        for(let j = i + 1 ; j <= mass.length; j++){
+            if(mass[j] % mass[i] == 0){
+                mass.splice(j, 1)
+            }
+        }
+    }
+    return mass.join(', ')
+}`]

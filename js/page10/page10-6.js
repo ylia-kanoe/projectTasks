@@ -23,3 +23,11 @@ taskOneInput.addEventListener('input', () => {
 
 
 */
+
+let massFunc = [`let taskOneInput = document.querySelector('.task-one-input')
+
+taskOneInput.addEventListener('input', () => {
+    if(taskOneInput.value.includes('blur')){
+        taskOneInput.blur()
+    }
+})`]

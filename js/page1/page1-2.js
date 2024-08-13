@@ -12,10 +12,6 @@ function numLastNumber(num) {
 }
 createBlockNum("№2 Дано число. Выведите последнюю цифру этого числа.", 205, 'Вывести последнюю цифру', numLastNumber)
 
-buttonFunc.addEventListener('click', () => {
-    result.textContent = inputValue.value[inputValue.value.length - 1]
-})
-
 /* №3 Дано число. Выведите сумму первой и последней цифры этого числа.*/
 function sumNumLastFirstSymbol(num) {
     return +String(num)[0] + +String(num)[String(num).length - 1]

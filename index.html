@@ -138,26 +138,34 @@
                         <li class="menu-item"><a href="page/page9/page9-5.html">Уровень 9.5</a></li>
                         <li class="menu-item"><a href="page/page9/page9-6.html">Уровень 9.6</a></li>
                         <li class="menu-item"><a href="page/page9/page9-7.html">Уровень 9.7</a></li>
-                        <li class="menu-item"><a class="not-ready" href="page/page9/page9-8.html">Уровень 9.8</a></li>
+                        <li class="menu-item"><a href="page/page9/page9-8.html">Уровень 9.8 <span class="not-ready">1/4</span></a></li>
                         <li class="menu-item"><a href="page/page9/page9-9.html">Уровень 9.9</a></li>
-                        <li class="menu-item"><a class="not-ready" href="page/page9/page9-10.html">Уровень 9.10</a></li>
+                        <li class="menu-item"><a href="page/page9/page9-10.html">Уровень 9.10 <span class="not-ready">2/3</span></a></li>
                     </ul>
                 </li>
                 <li class="menu-item"><a>Уровень 10</a>
                     <ul class="sub-menu">
                         <li class="menu-item"><a href="page/page10/page10-1.html">Уровень 10.1</a></li>
                         <li class="menu-item"><a href="page/page10/page10-2.html">Уровень 10.2</a></li>
-                        <li class="menu-item"><a class="not-ready" href="page/page10/page10-3.html">Уровень 10.3</a></li>
+                        <li class="menu-item"><a href="page/page10/page10-3.html">Уровень 10.3 <span class="not-ready">1/8</span></a></li>
                         <li class="menu-item"><a href="page/page10/page10-4.html">Уровень 10.4</a></li>
-                        <li class="menu-item"><a class="not-ready" href="page/page10/page10-5.html">Уровень 10.5</a></li>
-                        <li class="menu-item"><a class="not-ready" href="page/page10/page10-6.html">Уровень 10.6</a></li>
-                        <li class="menu-item"><a class="not-ready" href="page/page10/page10-7.html">Уровень 10.7</a></li>
-                        <li class="menu-item"><a class="not-ready" href="page/page10/page10-8.html">Уровень 10.8</a></li>
-                        <li class="menu-item"><a class="not-ready" href="page/page10/page10-9.html">Уровень 10.9</a></li>
-                        <li class="menu-item"><a class="not-ready" href="page/page10/page10-10.html">Уровень 10.10</a></li>
+                        <li class="menu-item"><a href="page/page10/page10-5.html">Уровень 10.5 <span class="not-ready">2/6</span></a></li>
+                        <li class="menu-item"><a href="page/page10/page10-6.html">Уровень 10.6 <span class="not-ready">5/6</span></a></li>
+                        <li class="menu-item"><a href="page/page10/page10-7.html">Уровень 10.7 <span class="not-ready">2/6</span></a></li>
+                        <li class="menu-item"><a href="page/page10/page10-8.html">Уровень 10.8 <span class="not-ready">2/5</span></a></li>
+                        <li class="menu-item"><a href="page/page10/page10-9.html">Уровень 10.9 <span class="not-ready">2/5</span></a></li>
+                        <li class="menu-item"><a href="page/page10/page10-10.html">Уровень 10.10 <span class="not-ready">3/4</span></a></li>
                     </ul>
                 </li>
             </ul>
+            <div class="search-block">
+                <img src="img/icons/search.png">
+                <input class="search-input hide">
+                <div class="search-content">
+                    <ul class="search-content-list-items">
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -204,13 +212,14 @@
                 <h2>Опыт работы</h2>
                 <table>
                     <tr>
-                        <td>Июль 2018 — Март 2019<span>(9 месяцев)</span></td>
+                        <td>Июль 2018 — Март 2019<p class="dateJob">(<span class="mounthOne"></span> месяцев)</p></td>
+                        
                         <td><p><b>ТОЛЬЯТТИАЗОТ (ТОАЗ)</b></p>
                             <p>Инженер-программист 3 категории</p>
                             <p>Разработка sql запросов и написание форм отчетов на внутреннем языке vip</p></td>
                     </tr>
                     <tr>
-                        <td>Март 2019 — Май 2021 <span>(2 года 3 месяца)</span></td>
+                        <td>Март 2019 — Май 2021 <p class="dateJob">(<span class="yearTwo"></span> года <span class="mounthTwo"></span> месяца)</p></td>
                         <td><p><b>CAPS GROUP</b></p>
                             <p>Программист</p>
                             <p>Проведение работ по сео оптимизации сайтов. Разработка модулей и плагинов на вордпресс,
@@ -235,6 +244,18 @@
         </ul></div>
         
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
+
+    <script>
+        let dateOneToaz = new Date('2018-07-01')
+        let dateTwoToaz  = new Date('2019-03-01')
+        document.querySelector('.mounthOne').textContent = Math.floor((dateTwoToaz - dateOneToaz) / (1000 * 60 * 60 * 24 * 30) % 12)
+        let dateOneCaps = new Date('2019-03-01')
+        let dateTwoCaps  = new Date('2021-05-18')
+        document.querySelector('.mounthTwo').textContent = Math.floor((dateTwoCaps - dateOneCaps) / (1000 * 60 * 60 * 24 * 30) % 12)
+        document.querySelector('.yearTwo').textContent = Math.floor((dateTwoCaps - dateOneCaps) / (1000 * 60 * 60 * 24 * 30 * 12))
+    </script>
 
 </body>
 
