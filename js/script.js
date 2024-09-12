@@ -1,3 +1,169 @@
+let navListItems = document.querySelector('ul.nav-menu')
+
+let menuItems = {
+    'Главная' : 'index.html',
+    'Уровень 1' : {
+        'Уровень 1.1' : 'page1-1.html',
+        'Уровень 1.2' : 'page1-2.html',
+        'Уровень 1.3' : 'page1-3.html',
+        'Уровень 1.4' : 'page1-4.html',
+        'Уровень 1.5' : 'page1-5.html',
+        'Уровень 1.6' : 'page1-6.html',
+        'Уровень 1.7' : 'page1-7.html',
+        'Уровень 1.8' : 'page1-8.html',
+        'Уровень 1.9' : 'page1-9.html',
+        'Уровень 1.10' : 'page1-10.html',
+    },
+    'Уровень 2' : {
+        'Уровень 2.1' : 'page2-1.html',
+        'Уровень 2.2' : 'page2-2.html',
+        'Уровень 2.3' : 'page2-3.html',
+        'Уровень 2.4' : 'page2-4.html',
+        'Уровень 2.5' : 'page2-5.html',
+        'Уровень 2.6' : 'page2-6.html',
+        'Уровень 2.7' : 'page2-7.html',
+        'Уровень 2.8' : 'page2-8.html',
+        'Уровень 2.9' : 'page2-9.html',
+        'Уровень 2.10' : 'page2-10.html',
+    },
+    'Уровень 3' : {
+        'Уровень 3.1' : 'page3-1.html',
+        'Уровень 3.2' : 'page3-2.html',
+        'Уровень 3.3' : 'page3-3.html',
+        'Уровень 3.4' : 'page3-4.html',
+        'Уровень 3.5' : 'page3-5.html',
+        'Уровень 3.6' : 'page3-6.html',
+        'Уровень 3.7' : 'page3-7.html',
+        'Уровень 3.8' : 'page3-8.html',
+        'Уровень 3.9' : 'page3-9.html',
+        'Уровень 3.10' : 'page3-10.html',
+    },
+    'Уровень 4' : {
+        'Уровень 4.1' : 'page4-1.html',
+        'Уровень 4.2' : 'page4-2.html',
+        'Уровень 4.3' : 'page4-3.html',
+        'Уровень 4.4' : 'page4-4.html',
+        'Уровень 4.5' : 'page4-5.html',
+        'Уровень 4.6' : 'page4-6.html',
+        'Уровень 4.7' : 'page4-7.html',
+        'Уровень 4.8' : 'page4-8.html',
+        'Уровень 4.9' : 'page4-9.html',
+        'Уровень 4.10' : 'page4-10.html',
+    },
+    'Уровень 5' : {
+        'Уровень 5.1' : 'page5-1.html',
+        'Уровень 5.2' : 'page5-2.html',
+        'Уровень 5.3' : 'page5-3.html',
+        'Уровень 5.4' : 'page5-4.html',
+        'Уровень 5.5' : 'page5-5.html',
+        'Уровень 5.6' : 'page5-6.html',
+        'Уровень 5.7' : 'page5-7.html',
+        'Уровень 5.8' : 'page5-8.html',
+        'Уровень 5.9' : 'page5-9.html',
+        'Уровень 5.10' : 'page5-10.html',
+    },
+    'Уровень 6' : {
+        'Уровень 6.1' : 'page6-1.html',
+        'Уровень 6.2' : 'page6-2.html',
+        'Уровень 6.3' : 'page6-3.html',
+        'Уровень 6.4' : 'page6-4.html',
+        'Уровень 6.5' : 'page6-5.html',
+        'Уровень 6.6' : 'page6-6.html',
+        'Уровень 6.7' : 'page6-7.html',
+        'Уровень 6.8' : 'page6-8.html',
+        'Уровень 6.9' : 'page6-9.html',
+        'Уровень 6.10' : 'page6-10.html',
+    },
+    'Уровень 7' : {
+        'Уровень 7.1' : 'page7-1.html',
+        'Уровень 7.2' : 'page7-2.html',
+        'Уровень 7.3' : 'page7-3.html',
+        'Уровень 7.4' : 'page7-4.html',
+        'Уровень 7.5' : 'page7-5.html',
+        'Уровень 7.6' : 'page7-6.html',
+        'Уровень 7.7' : 'page7-7.html',
+        'Уровень 7.8' : 'page7-8.html',
+        'Уровень 7.9' : 'page7-9.html',
+        'Уровень 7.10' : 'page7-10.html',
+    },
+    'Уровень 8' : {
+        'Уровень 8.1' : 'page8-1.html',
+        'Уровень 8.2' : 'page8-2.html',
+        'Уровень 8.3' : 'page8-3.html',
+        'Уровень 8.4' : 'page8-4.html',
+        'Уровень 8.5' : 'page8-5.html',
+        'Уровень 1.6' : 'page8-6.html',
+        'Уровень 8.7' : 'page8-7.html',
+        'Уровень 8.8' : 'page8-8.html',
+        'Уровень 8.9' : 'page8-9.html',
+        'Уровень 8.10' : 'page8-10.html',
+    },
+    'Уровень 9' : {
+        'Уровень 9.1' : 'page9-1.html',
+        'Уровень 9.2' : 'page9-2.html',
+        'Уровень 9.3' : 'page9-3.html',
+        'Уровень 9.4' : 'page9-4.html',
+        'Уровень 9.5' : 'page9-5.html',
+        'Уровень 9.6' : 'page9-6.html',
+        'Уровень 9.7' : 'page9-7.html',
+        'Уровень 9.8' : 'page9-8.html',
+        'Уровень 9.9' : 'page9-9.html',
+        'Уровень 9.10' : 'page9-10.html',
+    },
+    'Уровень 10' : {
+        'Уровень 10.1' : 'page10-1.html',
+        'Уровень 10.2' : 'page10-2.html',
+        'Уровень 10.3' : 'page10-3.html',
+        'Уровень 10.4' : 'page10-4.html',
+        'Уровень 10.5' : 'page10-5.html',
+        'Уровень 10.6' : 'page10-6.html',
+        'Уровень 10.7' : 'page1-7.html',
+        'Уровень 10.8' : 'page10-8.html',
+        'Уровень 10.9' : 'page10-9.html',
+        'Уровень 10.10' : 'page10-10.html',
+    }
+}
+
+function menuGenerate(){
+    for(let item of Object.entries(menuItems)){
+        let listItem = document.createElement('li')
+        listItem.classList.add('menu-item')
+        let referenceItem = document.createElement('a')
+        listItem.append(referenceItem)
+        referenceItem.textContent = item[0]
+
+        if(item[1] instanceof Object){
+            let listItems2 = document.createElement('ul')
+            listItems2.classList.add('sub-menu')
+            for(let item2 of Object.entries(item[1])){
+
+                let listItem2 = document.createElement('li')
+                listItem2.classList.add('menu-item')
+                let referenceItem2 = document.createElement('a')
+                listItem2.append(referenceItem2)
+                referenceItem2.textContent = item2[0]
+    
+                if(location.href.includes('index.html')){
+                    referenceItem2.href = 'page/' + item2[1].split('-')[0] + '/' + item2[1]
+                } else if(location.href.split('/').pop().includes(item2[1].split('-')[0])){
+                    referenceItem2.href = item2[1]
+                } else {
+                    referenceItem2.href = '../' +  item2[1].split('-')[0] + '/' + item2[1]
+                }
+                listItems2.append(listItem2)
+            }
+            listItem.append(listItems2)
+        }
+        else if(item[0] == 'Главная'){
+            referenceItem.href = '../../' + item[1]
+        } else {
+            referenceItem.href = item[1]
+        }
+        navListItems.append(listItem)
+    }
+}
+
+menuGenerate(menuItems)
 
 let workingTasks = document.querySelector('.working-tasks')
 let iconPre = document.querySelectorAll('.icon-pre')
